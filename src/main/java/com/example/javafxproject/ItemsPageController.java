@@ -60,11 +60,15 @@ public class ItemsPageController {
         return items.get(random.nextInt(items.size()));
     }
 
+    
+    //unsplash api 이미지 받아오는 메서드
     private String getPhotoUrl(String item) throws IOException {
-        URL url = new URL("https://api.unsplash.com/search/photos?query="+item+"&client_id=pghq_Bp2Yt7wp5NjDeI4iQOkpIUD9HDOheO0xnXASqc");
+        //GET방식으로 unsplash 이미 요청 => 메서드 item string 값에 맞춰 최상단 1장만
+        URL url = new URL("https://api.unsplash.com/search/photos?query="+item+"&SLI8Fs-qqVA32o0qrBUiFSNVqcaSSNuY-_7DiQnvBzs");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
 
+        // 버퍼리더로 값 가져오기 => reader에 담기
         BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
         StringBuilder response = new StringBuilder();
         String line;

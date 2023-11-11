@@ -52,7 +52,7 @@ public class AnimalsPageController {
 
     //use unsplash API
     private String getPhotoUrl(String animal) throws IOException {
-        URL url = new URL("https://api.unsplash.com/search/photos?query="+animal+"&client_id=SLI8Fs-qqVA32o0qrBUiFSNVqcaSSNuY-_7DiQnvBzs");
+        URL url = new URL("https://api.unsplash.com/search/photos?query="+animal+"&client_id=SLI8Fs-qqVA32o0qrBUiFSNVqcaSSNuY-_7DiQnvBzs&per_page=1");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
 
@@ -65,7 +65,12 @@ public class AnimalsPageController {
         }
         reader.close();
 
-        return "hi";
+
+        // API 응답 파싱 : 문장을 이루고 있는 구성 성분으로 분해하고 그들 사이의 위계관계를 분석하여 문장의 구조를 결정하는 것을 말한다.
+        JsonElement jsonResponse = JsonParser.parseString(response.toString());
+
+
+        return "imageUrl";
 
     }
 
