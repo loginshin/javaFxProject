@@ -1,8 +1,7 @@
-package com.example.javafxproject;
+package com.example.javafxproject.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -30,20 +29,25 @@ public class HelloController {
 
     @FXML
     private void goToAnimalsPage() {
-        changePage("AnimalsPage.fxml");
+        changePage("GptPage.fxml");
     }
 
+
+    //fxml을 Stage에 등록한다.
     @FXML
-    private void goToObjectsPage() {
-        changePage("ObjectsPage.fxml");
+    private void goToGptPage() {
+        changePage("/com/example/javafxproject/fxml/GptPage.fxml");
     }
 
+    //페이지 바꾸는 메서드
     private void changePage(String fxml) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource(fxml));
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.show();
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
