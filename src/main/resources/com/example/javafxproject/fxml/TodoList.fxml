@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.javafxproject.controller.TodoListController">
+
+    <!-- 할 일 목록을 표시하는 ListView -->
+    <ListView fx:id="todoListView"/>
+
+    <!-- 새 할 일을 입력하는 TextField -->
+    <TextField fx:id="todoInput"/>
+
+    <!-- 할 일을 추가하는 버튼 -->
+    <Button text="추가할게영" onAction="#addTodoItem"/>
+
+    <!-- 선택한 할 일을 삭제하는 버튼 -->
+    <Button text="삭제할게영" onAction="#deleteTodoItem"/>
+
+    <!-- 전체 삭제 버튼 -->
+    <Button text="전체 삭제할게영" onAction="#clearAllItems"/>
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+</VBox>

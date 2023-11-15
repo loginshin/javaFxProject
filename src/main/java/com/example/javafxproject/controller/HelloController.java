@@ -39,6 +39,11 @@ public class HelloController {
         changePage("/com/example/javafxproject/fxml/GptPage.fxml");
     }
 
+    @FXML
+    private void goToTodoList() {
+        changePage("/com/example/javafxproject/fxml/TodoList.fxml");
+    }
+
     //페이지 바꾸는 메서드
     private void changePage(String fxml) {
         try {
