@@ -1,2 +1,2 @@
 # javaFxProject
-we make IntelliBooks kiosk project for java FX
+We make IntelliBooks kiosk project for java FX
