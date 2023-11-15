@@ -1,2 +1,2 @@
 # javaFxProject
-maybe we make object photo quize project for java FXFX
+we make IntelliBooks kiosk project for java FX
