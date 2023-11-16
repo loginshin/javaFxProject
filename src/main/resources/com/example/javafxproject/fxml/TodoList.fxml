@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.controller.TodoListController">
-    <children>
-        <ListView fx:id="todoListView" VBox.vgrow="ALWAYS" />
-        <HBox spacing="10">
-            <TextField fx:id="todoInput" promptText="새 할 일을 입력하세요" HBox.hgrow="ALWAYS"/>
-            <Button text="추가" onAction="#addTodoItem"/>
-            <Button text="전체 삭제" onAction="#clearAllItems"/>
-        </HBox>
-    </children>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.javafxproject.controller.TodoListController">
+
+    <ListView fx:id="todoListView" VBox.vgrow="ALWAYS"/>
+
+    <TextField fx:id="todoInput" promptText="새 할 일을 입력하세요"/>
+
+    <Button text="추가할게영" onAction="#addTodoItem"/>
+    <Button text="삭제할게영" onAction="#deleteTodoItem"/>
+    <Button text="전체 삭제할게영" onAction="#clearAllItems"/>
 </VBox>
