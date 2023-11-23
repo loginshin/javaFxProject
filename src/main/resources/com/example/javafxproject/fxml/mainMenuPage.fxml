@@ -21,7 +21,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#58728a" height="50.0" layoutX="126.0" layoutY="175.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 23; -fx-arc-width: 23;" width="50.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#58728a" height="50.0" layoutX="233.0" layoutY="175.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 23; -fx-arc-width: 23;" width="50.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#58728a" height="50.0" layoutX="126.0" layoutY="83.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 23; -fx-arc-width: 23;" width="50.0" />
-      <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="134.0" layoutY="87.0" onMouseClicked="#loadBookListPage" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="btn1" fitHeight="42.0" fitWidth="42.0" layoutX="134.0" layoutY="87.0"  pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/Menu%2520book.png" />
          </image>
