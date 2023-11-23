@@ -1,14 +1,17 @@
 package com.example.javafxproject.controller;
 
+import com.example.javafxproject.dto.Book;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.List;
 
 
 public class GptPageController {
+
     @FXML
     private ImageView imageView;
     private String json;
