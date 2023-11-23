@@ -3,16 +3,54 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
-
 
 <AnchorPane prefHeight="510.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.controller.MainMenuController">
    <children>
-      <Label layoutX="40.0" layoutY="30.0" text="Menu">
+      <Label layoutX="50.0" layoutY="30.0" text="Menu">
          <font>
             <Font name="Corbel Bold" size="28.0" />
          </font>
       </Label>
-      <ImageView fitHeight="53.0" fitWidth="54.0" layoutX="308.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="330.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/pngtree-management-icon-for-your-project-png-image_4868447%25201.png" />
+         </image></ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#58728a" height="50.0" layoutX="233.0" layoutY="83.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 23; -fx-arc-width: 23;" width="50.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#58728a" height="50.0" layoutX="126.0" layoutY="175.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 23; -fx-arc-width: 23;" width="50.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#58728a" height="50.0" layoutX="233.0" layoutY="175.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 23; -fx-arc-width: 23;" width="50.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#58728a" height="50.0" layoutX="126.0" layoutY="83.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 23; -fx-arc-width: 23;" width="50.0" />
+      <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="134.0" layoutY="87.0" onMouseClicked="#loadBookListPage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Menu%2520book.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="237.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/66805152-피드백-아이콘%25201.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="43.0" layoutX="130.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/112475154-임대-벡터-아이콘-기호-아이콘-벡터-일러스트-레이-션-개인-및-상업적-사용-깨끗-한-봐-유행%25201.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="43.0" layoutX="237.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/107943401-흰색-배경에-고립-된-반환-아이콘-벡터-투명-한-배경에-반환-기호의-로고-개념-채워진된-검은%25201.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="125.0" layoutY="133.0" text="도서 목록" textFill="#aa5eae" />
+      <Label layoutX="240.0" layoutY="133.0" text="피드백" textFill="#aa5eae" />
+      <Label layoutX="140.0" layoutY="225.0" text="대여" textFill="#aa5eae" />
+      <Label layoutX="244.0" layoutY="225.0" text="반납" textFill="#aa5eae" />
+      <Label layoutX="319.0" layoutY="63.0" text="관리자 모드" textFill="#aa5eae" />
+      <Label layoutX="35.0" layoutY="375.0" prefHeight="25.0" prefWidth="50.0" text="popular" />
+      <ImageView fitHeight="115.0" fitWidth="252.0" layoutX="74.0" layoutY="255.0">
+         <image>
+            <Image url="@../img/Group%25201.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
