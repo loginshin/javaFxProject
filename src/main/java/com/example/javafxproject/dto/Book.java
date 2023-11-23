@@ -6,7 +6,7 @@ public class Book {
     private int price;
     private String info;
 
-    private String maker;
+    private String Author;
 
     private String categoy;
 
@@ -24,13 +24,12 @@ public class Book {
         this.name=name;
     }
 
-    public Book(String name, int price, String info, String maker, String categoy, String rentPhoneNumber, String imgUrl) {
+    public Book(String name, int price, String info, String maker, String categoy,  String imgUrl) {
         this.name = name;
         this.price = price;
         this.info = info;
-        this.maker = maker;
+        this.Author = maker;
         this.categoy = categoy;
-        this.rentPhoneNumber = rentPhoneNumber;
         this.imgUrl = imgUrl;
     }
 
@@ -60,12 +59,12 @@ public class Book {
         this.info = info;
     }
 
-    public String getMaker() {
-        return maker;
+    public String getAuthor() {
+        return Author;
     }
 
-    public void setMaker(String maker) {
-        this.maker = maker;
+    public void setAuthor(String maker) {
+        this.Author = maker;
     }
 
     public String getCategoy() {
