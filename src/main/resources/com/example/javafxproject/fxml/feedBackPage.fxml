@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1280.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.controller.FeedBackController">
+<AnchorPane prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.controller.FeedBackController">
    <children>
-      <ImageView fitHeight="131.0" fitWidth="333.0" layoutX="35.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="131.0" fitWidth="333.0" layoutX="41.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/feedbackImg.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="104.0" fitWidth="97.0" layoutX="312.0" layoutY="1073.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="74.0" fitWidth="80.0" layoutX="278.0" layoutY="663.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/Home.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="74.0" fitWidth="271.0" layoutX="225.0" layoutY="1196.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="25.0" fitWidth="263.0" layoutX="214.0" layoutY="745.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/goBackImg.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9d9d9d" height="89.0" layoutX="87.0" layoutY="916.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="562.0" />
-      <Label layoutX="102.0" layoutY="944.0" prefHeight="34.0" prefWidth="420.0" text="Please write down your feedback" textFill="#0000007a">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9d9d9d" height="66.0" layoutX="57.0" layoutY="581.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="503.0" />
+      <Label layoutX="68.0" layoutY="597.0" prefHeight="34.0" prefWidth="420.0" text="Please write down your feedback" textFill="#0000007a">
          <font>
             <Font size="22.0" />
          </font></Label>
-      <TabPane layoutX="45.0" layoutY="144.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" />
-      <Accordion />
-      <TextArea layoutX="35.0" layoutY="210.0" prefHeight="646.0" prefWidth="652.0" />
+      <TextArea layoutX="31.0" layoutY="142.0" prefHeight="410.0" prefWidth="538.0" />
    </children>
 </AnchorPane>

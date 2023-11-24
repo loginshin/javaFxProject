@@ -21,7 +21,7 @@ public class HelloApplication extends Application {
 
         //javaFX View
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/javafxproject/fxml/hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 720, 1280);
+        Scene scene = new Scene(fxmlLoader.load(), 600, 800);
         stage.setTitle("Kiosk");
         stage.setScene(scene);
         stage.show();
