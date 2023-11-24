@@ -24,6 +24,10 @@ public class MainMenuController implements Initializable {
     private ImageView btn1;
 
     @FXML ImageView btn2;
+
+    @FXML
+    ImageView btn3;
+
     private BookService bookService;
 
 

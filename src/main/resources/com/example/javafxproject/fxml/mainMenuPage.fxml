@@ -13,17 +13,17 @@
             <Image url="@../img/RecommendBookimg.png" />
          </image>
       </ImageView>
-      <ImageView layoutX="172.0" layoutY="106.0">
+      <ImageView fx:id="btn1" onMouseClicked="#btn1ClickEvent" layoutX="172.0" layoutY="106.0">
          <image>
             <Image url="@../img/BookListButtonimg3.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="36.0" fitWidth="146.0" layoutX="57.0" layoutY="36.0" preserveRatio="true">
+      <ImageView  fitHeight="36.0" fitWidth="146.0" layoutX="57.0" layoutY="36.0" preserveRatio="true">
          <image>
             <Image url="@../img/MenuTitleimg.png" />
          </image>
       </ImageView>
-      <ImageView layoutX="345.0" layoutY="106.0">
+      <ImageView fx:id="btn2" onMouseClicked="#btn2ClickEvent" layoutX="345.0" layoutY="106.0">
          <image>
             <Image url="@../img/FeedBackButtonimg.png" />
          </image>
