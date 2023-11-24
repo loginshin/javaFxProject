@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.javafxproject.fxml.BookRentController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1280.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="260.0" layoutY="1124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/HomeIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="578.0" fitWidth="371.0" layoutX="169.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Book2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="200.0" layoutX="53.0" layoutY="683.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Overview.png" />
+         </image>
+      </ImageView>
+      <TextArea layoutX="53.0" layoutY="757.0" prefHeight="200.0" prefWidth="603.0" text="The Catcher in the Rye is a novel by J. D. Salinger,&#10;partially published in serial form in 1945–1946 and&#10;as a novel in 1951. It was originally intended for adu &#10;lts but is often read by adolescents for its theme of&#10;angst, alienation and as a critique......">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextArea>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="260.0" layoutY="1032.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Rent.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="40.0" layoutX="53.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Back.png" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>
