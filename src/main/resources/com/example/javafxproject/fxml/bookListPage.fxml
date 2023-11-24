@@ -1,63 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<!--<?import javafx.scene.control.ToggleButton?>-->
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1280.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1280.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.controller.BookListController">
    <children>
-      <ImageView fitHeight="40.0" fitWidth="61.0" layoutX="98.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="20.0">
-         <image>
-            <Image url="@../img/Home.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="30.0" fitWidth="90.0" layoutX="73.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/Back to Menu.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="40.0" fitWidth="133.0" layoutX="52.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="106.0" fitWidth="293.0" layoutX="214.0" layoutY="63.0" preserveRatio="true">
          <image>
             <Image url="@../img/Book List.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="40.0" fitWidth="230.0" layoutX="6.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="124.0" fitWidth="152.0" layoutX="299.0" layoutY="1039.0" preserveRatio="true">
          <image>
-            <Image url="@../img/_ListItemPattern.png" />
+            <Image url="@../img/Home.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="40.0" fitWidth="230.0" layoutX="6.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="161.0" fitWidth="304.0" layoutX="209.0" layoutY="1185.0" preserveRatio="true">
          <image>
-            <Image url="@../img/Content.png" />
+            <Image url="@../img/Back to Menu.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="40.0" fitWidth="230.0" layoutX="6.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+      <ScrollPane layoutY="404.0" prefHeight="197.0" prefWidth="720.0">
+         <content>
+            <VBox prefHeight="205.0" prefWidth="717.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="67.0" fitWidth="84.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/GrayBlockimg.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label graphicTextGap="10.0" prefHeight="71.0" prefWidth="56.0" text="소설">
+                           <font>
+                              <Font name="Lucida Bright Demibold" size="17.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="67.0" fitWidth="84.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/GrayBlockimg.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label graphicTextGap="10.0" prefHeight="71.0" prefWidth="120.0" text="정치/사회">
+                           <font>
+                              <Font name="Lucida Bright Demibold" size="17.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="67.0" fitWidth="84.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/GrayBlockimg.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label graphicTextGap="10.0" prefHeight="71.0" prefWidth="120.0" text="컴퓨터/IT">
+                           <font>
+                              <Font name="Lucida Bright Demibold" size="17.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="67.0" fitWidth="84.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/GrayBlockimg.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label graphicTextGap="10.0" prefHeight="71.0" prefWidth="120.0" text="경제/경영">
+                           <font>
+                              <Font name="Lucida Bright Demibold" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="67.0" fitWidth="84.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/GrayBlockimg.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label graphicTextGap="10.0" prefHeight="71.0" prefWidth="120.0" text="역사/문화">
+                           <font>
+                              <Font name="Lucida Bright Demibold" size="17.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="67.0" fitWidth="84.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/GrayBlockimg.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label graphicTextGap="10.0" prefHeight="71.0" prefWidth="88.0" text="과학">
+                           <font>
+                              <Font name="Lucida Bright Demibold" size="17.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="67.0" fitWidth="87.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/GrayBlockimg.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label graphicTextGap="10.0" prefHeight="71.0" prefWidth="120.0" text="기술/공학">
+                           <font>
+                              <Font name="Lucida Bright Demibold" size="17.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="67.0" fitWidth="84.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/GrayBlockimg.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label graphicTextGap="10.0" prefHeight="71.0" prefWidth="77.0" text="잡지">
+                           <font>
+                              <Font name="Lucida Bright Demibold" size="17.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="67.0" fitWidth="84.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/GrayBlockimg.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label graphicTextGap="10.0" prefHeight="71.0" prefWidth="77.0" text="만화">
+                           <font>
+                              <Font name="Lucida Bright Demibold" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="1.0" layoutY="676.0" prefHeight="321.0" prefWidth="720.0">
+         <content>
+            <HBox prefHeight="324.0" prefWidth="1147.0">
+               <children>
+                  <ImageView fitHeight="314.0" fitWidth="230.0">
+                     <image>
+                        <Image url="@../img/EnglishBookimg.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="314.0" fitWidth="230.0">
+                     <image>
+                        <Image url="@../img/EnglishBookimg.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="314.0" fitWidth="230.0">
+                     <image>
+                        <Image url="@../img/EnglishBookimg.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="314.0" fitWidth="230.0">
+                     <image>
+                        <Image url="@../img/EnglishBookimg.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="314.0" fitWidth="230.0">
+                     <image>
+                        <Image url="@../img/EnglishBookimg.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </content>
+      </ScrollPane>
+      <ImageView fitHeight="230.0" fitWidth="720.0" layoutY="140.0" opacity="0.63">
          <image>
-            <Image url="@../img/_ListItemPattern (1).png" />
+            <Image url="@../img/Libraryimg.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="40.0" fitWidth="230.0" layoutX="6.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/_ListItemPattern (2).png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="40.0" fitWidth="230.0" layoutX="6.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/_ListItemPattern (3).png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="40.0" fitWidth="230.0" layoutX="6.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/_ListItemPattern (4).png" />
-         </image>
-      </ImageView>
-<!--      <ToggleButton layoutX="214.0" layoutY="119.0" mnemonicParsing="false" style="-fx-background-color: ghost;" />-->
    </children>
 </AnchorPane>
