@@ -1,56 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 
-<AnchorPane prefHeight="1280" prefWidth="720" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.controller.MainMenuController">
+<AnchorPane prefHeight="1280" prefWidth="720" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.controller.MainMenuController">
    <children>
-      <Label layoutX="50.0" layoutY="30.0" text="Menu">
-         <font>
-            <Font name="Corbel Bold" size="28.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="330.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="270.0" fitWidth="571.0" layoutX="75.0" layoutY="361.0">
          <image>
-            <Image url="@../img/adminMark.png" />
-         </image></ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#58728a" height="50.0" layoutX="233.0" layoutY="83.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 23; -fx-arc-width: 23;" width="50.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#58728a" height="50.0" layoutX="126.0" layoutY="175.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 23; -fx-arc-width: 23;" width="50.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#58728a" height="50.0" layoutX="233.0" layoutY="175.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 23; -fx-arc-width: 23;" width="50.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#58728a" height="50.0" layoutX="126.0" layoutY="83.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 23; -fx-arc-width: 23;" width="50.0" />
-
-      <ImageView fx:id="btn1" onMouseClicked="#btn1ClickEvent" fitHeight="42.0" fitWidth="42.0" layoutX="134.0" layoutY="87.0"  pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/bookListButtonImg.png" />
+            <Image url="@../img/RecommendBookimg.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="btn2" onMouseClicked="#btn2ClickEvent" fitHeight="42.0" fitWidth="42.0" layoutX="237.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView layoutX="212.0" layoutY="106.0">
          <image>
-            <Image url="@../img/feedbackImg.png" />
+            <Image url="@../img/BookListButtonimg2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="42.0" fitWidth="43.0" layoutX="130.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="50.0" fitWidth="155.0" layoutX="57.0" layoutY="36.0" preserveRatio="true">
          <image>
-            <Image url="@../img/rentImg.png" />
+            <Image url="@../img/MenuTitleimg.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="42.0" fitWidth="43.0" layoutX="237.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView layoutX="410.0" layoutY="106.0">
          <image>
-            <Image url="@../img/returnImg.png" />
+            <Image url="@../img/FeedBackButtonimg.png" />
          </image>
       </ImageView>
-      <Label layoutX="125.0" layoutY="133.0" text="도서 목록" textFill="#aa5eae" />
-      <Label layoutX="240.0" layoutY="133.0" text="피드백" textFill="#aa5eae" />
-      <Label layoutX="140.0" layoutY="225.0" text="대여" textFill="#aa5eae" />
-      <Label layoutX="244.0" layoutY="225.0" text="반납" textFill="#aa5eae" />
-      <Label layoutX="319.0" layoutY="63.0" text="관리자 모드" textFill="#aa5eae" />
-      <Label layoutX="35.0" layoutY="375.0" prefHeight="25.0" prefWidth="50.0" text="popular" />
-      <ImageView fitHeight="115.0" fitWidth="252.0" layoutX="74.0" layoutY="255.0">
+      <ImageView fitHeight="99.0" fitWidth="126.0" layoutX="550.0" layoutY="36.0" preserveRatio="true">
          <image>
-            <Image url="@../img/bookRecomendImg.png" />
+            <Image url="@../img/AdminModeButtonimg2.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="221.0" layoutY="224.0">
+         <image>
+            <Image url="@../img/RentButtonimg.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="385.0" layoutY="224.0">
+         <image>
+            <Image url="@../img/ReturnButtonimg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="135.0" layoutX="448.0" layoutY="396.0">
+         <image>
+            <Image url="@../img/EnglishBookimg.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="46.0" layoutY="728.0" prefHeight="479.0" prefWidth="607.0">
+         <content>
+            <HBox prefHeight="477.0" prefWidth="606.0">
+               <children>
+                  <ImageView fitHeight="468.0" fitWidth="338.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/EnglishBookimg.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="468.0" fitWidth="338.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/EnglishBookimg.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="468.0" fitWidth="338.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/EnglishBookimg.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </content>
+      </ScrollPane>
+      <ImageView fitHeight="52.0" fitWidth="146.0" layoutX="46.0" layoutY="663.0" preserveRatio="true">
+         <image>
+            <Image url="@../img/Popularimg.png" />
          </image>
       </ImageView>
    </children>
