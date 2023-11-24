@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.javafxproject.fxml.AdminAuthPage"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.controller.admin.AdminAuthController">
+   <children>
+      <ImageView fitHeight="510.0" fitWidth="432.0" layoutX="84.0" layoutY="41.0">
+         <image>
+            <Image url="@../../img/AdminAuthimg.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9d9d9d" height="66.0" layoutX="59.0" layoutY="570.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 100; -fx-arc-width: 100;" width="482.0" />
+      <Label layoutX="74.0" layoutY="574.0" prefHeight="59.0" prefWidth="452.0" text="Please enter the administrator code." textFill="#00000077">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="59.0" fitWidth="75.0" layoutX="271.0" layoutY="648.0" preserveRatio="true">
+         <image>
+            <Image url="@../../img/Home.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="213.0" layoutX="196.0" layoutY="718.0" preserveRatio="true">
+         <image>
+            <Image url="@../../img/Back to Menu.png" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>
