@@ -5,25 +5,19 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.javafxproject.controller.BookListController"
-            prefHeight="400.0" prefWidth="600.0">
-    <Label fx:id="start">hi</Label>
-
-<?import javafx.scene.control.ToggleButton?>
+<!--<?import javafx.scene.control.ToggleButton?>-->
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="397.0" prefWidth="236.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1280.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="40.0" fitWidth="61.0" layoutX="98.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="20.0">
          <image>
             <Image url="@../img/Home.png" />
-         </image></ImageView>
+         </image>
+      </ImageView>
       <ImageView fitHeight="30.0" fitWidth="90.0" layoutX="73.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/Back to Menu.png" />
@@ -64,6 +58,6 @@
             <Image url="@../img/_ListItemPattern (4).png" />
          </image>
       </ImageView>
-      <ToggleButton layoutX="214.0" layoutY="119.0" mnemonicParsing="false" style="-fx-background-color: ghost;" />
+<!--      <ToggleButton layoutX="214.0" layoutY="119.0" mnemonicParsing="false" style="-fx-background-color: ghost;" />-->
    </children>
 </AnchorPane>

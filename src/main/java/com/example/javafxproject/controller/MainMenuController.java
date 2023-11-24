@@ -22,8 +22,10 @@ public class MainMenuController implements Initializable {
 
     @FXML
     private ImageView btn1;
+
+    @FXML ImageView btn2;
     private BookService bookService;
-    private BookListController controller;
+
 
     public void setBookService(BookService bookService){
         this.bookService = bookService;
@@ -32,31 +34,53 @@ public class MainMenuController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        btn1.setOnMouseClicked(new EventHandler() {
-            @Override
-            public void handle(Event event) {
-                //클릭시 실행할 이벤트
-                System.out.println("bookListPage로 이동합니다");
-                changePage("/com/example/javafxproject/fxml/bookListPage.fxml");
-            }
-        });
+
 
     }
 
 
-    private void changePage(String fxml) {
+    @FXML
+    private void btn1ClickEvent(){
+        System.out.println("btn1 click event");
+        System.out.println("bookListPage로 이동합니다");
+
+        Stage newStage = new Stage();
+        BookListController controller;
+
+        try {
+            // 새로운 FXML 파일 로드
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/bookListPage.fxml"));
+            Parent root = loader.load();
+
+            Stage currentStage = (Stage) btn1.getScene().getWindow();
+            // 새로운 Scene 생성 후 현재 Stage에 설정
+            Scene scene = new Scene(root);
+            currentStage.setScene(scene);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+
+    
+    // btn 2 클릭시
+    @FXML
+    private void btn2ClickEvent(){
+        System.out.println("btn2 click event");
+        System.out.println("feedbackPage 이동합니다");
         Stage newStage = new Stage();
         try {
             // 새로운 FXML 파일 로드
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/feedBackPage.fxml"));
             Parent root = loader.load();
 
-            controller=loader.getController(); // 새로운 컨트롤러에 BookService 객체 전달
             System.out.println("send data => "+bookService);
 
-            // 현재 Stage 가져오기
-            Stage currentStage = (Stage) btn1.getScene().getWindow();
-
+            Stage currentStage = (Stage) btn2.getScene().getWindow();
             // 새로운 Scene 생성 후 현재 Stage에 설정
             Scene scene = new Scene(root);
             currentStage.setScene(scene);

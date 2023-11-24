@@ -15,9 +15,13 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
+
+
+
+
         //javaFX View
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/javafxproject/fxml/hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 800, 800);
+        Scene scene = new Scene(fxmlLoader.load(), 720, 1280);
         stage.setTitle("Kiosk");
         stage.setScene(scene);
         stage.show();
