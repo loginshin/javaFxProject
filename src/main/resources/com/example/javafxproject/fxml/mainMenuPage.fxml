@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="800" prefWidth="600" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.controller.MainMenuController">
+<?import javafx.scene.control.skin.SplitPaneSkin.Content?>
+<AnchorPane prefHeight="800" prefWidth="600" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.controller.MainMenuController">
    <children>
       <ImageView fitHeight="159.0" fitWidth="377.0" layoutX="124.0" layoutY="339.0" preserveRatio="true">
          <image>
             <Image url="@../img/RecommendBookimg.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="btn1" onMouseClicked="#btn1ClickEvent" layoutX="172.0" layoutY="106.0">
+      <ImageView fx:id="btn1" layoutX="172.0" layoutY="106.0" onMouseClicked="#btn1ClickEvent">
          <image>
             <Image url="@../img/BookListButtonimg3.png" />
          </image>
       </ImageView>
-      <ImageView  fitHeight="36.0" fitWidth="146.0" layoutX="57.0" layoutY="36.0" preserveRatio="true">
+      <ImageView fitHeight="36.0" fitWidth="146.0" layoutX="57.0" layoutY="36.0" preserveRatio="true">
          <image>
             <Image url="@../img/MenuTitleimg.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="btn2" onMouseClicked="#btn2ClickEvent" layoutX="345.0" layoutY="106.0">
+      <ImageView fx:id="btn2" layoutX="345.0" layoutY="106.0" onMouseClicked="#btn2ClickEvent">
          <image>
             <Image url="@../img/FeedBackButtonimg.png" />
          </image>
@@ -48,15 +47,17 @@
             <Image url="@../img/EnglishBookimg.png" />
          </image>
       </ImageView>
-      <ScrollPane layoutX="25.0" layoutY="586.0" prefHeight="174.0" prefWidth="552.0">
-         <content>
-            <HBox prefHeight="172.0" prefWidth="543.0" />
-         </content>
-      </ScrollPane>
-      <ImageView fitHeight="44.0" fitWidth="130.0" layoutX="43.0" layoutY="531.0" preserveRatio="true">
+      <Pane prefWidth="-Infinity" prefHeight="-Infinity">
+         <HBox fx:id="bookImages" prefHeight="500" >
+                  <!--책 데이터 들어가는 곳-->
+
+         </HBox>
+      </Pane>
+      <ImageView fitHeight="100.0" fitWidth="130.0" layoutX="43.0" layoutY="531.0" preserveRatio="true">
          <image>
             <Image url="@../img/Popularimg.png" />
          </image>
       </ImageView>
+
    </children>
 </AnchorPane>
