@@ -209,19 +209,22 @@ public class MainMenuController implements Initializable {
                 ImageView imageView = new ImageView(new Image(book.getImgUrl()));
                 imageView.setFitHeight(300);
                 imageView.setFitWidth(250);
-    //            bookImages.getChildren().add(imageView);
-              
-                              // Vbox에 ImageView와 Label 추가
+    //          bookImages.getChildren().add(imageView);
+
+                // 책의 제목과 가격을 표시하는 Label 생성
+                Label titleLabel = new Label(book.getName());
+                Label priceLabel = new Label(String.valueOf(book.getPrice())); //int값이기 때문에 string으로 전환
+
+                // Vbox에 ImageView와 Label 추가
                 VBox vbox = new VBox(imageView, titleLabel,priceLabel);
 
                 // HBox에 VBox 추가 어디에 추가할지
                 bookImages.getChildren().add(vbox);
-
             }
     }
 }
 
 
-}
+
 
 
