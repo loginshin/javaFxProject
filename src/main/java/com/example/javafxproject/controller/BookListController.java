@@ -27,10 +27,8 @@ public class BookListController implements Initializable {
     @FXML
     public void goMainBtnFunc(){
         System.out.println("goMainBtnFunc를 실행합니다.");
-
         Stage newStage = new Stage();
         MainMenuController controller;
-
         try {
             // 새로운 FXML 파일 로드
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/mainMenuPage.fxml"));
@@ -40,13 +38,8 @@ public class BookListController implements Initializable {
             // 새로운 Scene 생성 후 현재 Stage에 설정
             Scene scene = new Scene(root);
             currentStage.setScene(scene);
-
-
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
-
-
 }
