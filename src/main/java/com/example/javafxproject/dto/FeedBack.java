@@ -6,6 +6,28 @@ public class FeedBack {
 
     private boolean solve;
 
+    public FeedBack(String feedBack, boolean solve) {
+        FeedBack = feedBack;
+        this.solve = solve;
+    }
+    public FeedBack(){
 
+    }
 
+    public String getFeedBack() {
+        return FeedBack;
+    }
+
+    public void setFeedBack(String feedBack) {
+        FeedBack = feedBack;
+    }
+
+    public boolean isSolve() {
+        return solve;
+    }
+
+    public void setSolve(boolean solve) {
+        this.solve = solve;
+    }
 }
+
