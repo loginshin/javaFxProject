@@ -143,9 +143,7 @@ public class MainMenuController implements Initializable {
             currentStage.setScene(scene);
 
 
-                // 책의 제목과 가격을 표시하는 Label 생성
-                Label titleLabel = new Label(book.getName());
-                Label priceLabel = new Label(String.valueOf(book.getPrice())); //int값이기 때문에 string으로 전환
+
 
         } catch (IOException e) {
             e.printStackTrace();

@@ -2,6 +2,7 @@ package com.example.javafxproject.controller;
 
 import com.example.javafxproject.dto.Book;
 import com.example.javafxproject.service.BookService;
+import com.example.javafxproject.service.FeedBackService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -27,18 +28,15 @@ public class HelloController implements Initializable {
     // static으로 데이터를 관리하는건 매우 위험, private으로 관리할것
     static BookService bookService = new BookService();;
 
+    //FeedBack 내용 담는곳 String내용 boolean해결
+    static FeedBackService feedBackService =  new FeedBackService();
+
     @FXML
     private Button btn;
 
     public  HelloController(){
 
     }
-
-    public BookService getBookService(){
-        return bookService;
-    }
-
-
 
 
     //책 데이터를 채우는 작업 진행
