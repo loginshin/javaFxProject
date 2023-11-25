@@ -32,10 +32,18 @@ public class MainMenuController implements Initializable {
     @FXML
     private ImageView btn1;
 
-    @FXML ImageView btn2;
+    @FXML
+    private ImageView btn2;
 
     @FXML
-    ImageView btn3;
+    private ImageView btn3;
+
+    @FXML
+    private ImageView btn4;
+
+    @FXML
+    private ImageView btn5;
+
 
     @FXML
     private HBox bookImages;
@@ -45,6 +53,7 @@ public class MainMenuController implements Initializable {
     
 
     HelloController helloController = new HelloController();
+
 
 
 //    public void setBookService(BookService bookService){
@@ -67,12 +76,12 @@ public class MainMenuController implements Initializable {
 
 
     @FXML
-    private void btn1ClickEvent(){
+    private void btn1ClickEvent() {
         System.out.println("btn1 click event");
         System.out.println("bookListPage로 이동합니다");
 
         Stage newStage = new Stage();
-        BookListController controller;
+        //BookListController controller;
 
         try {
             // 새로운 FXML 파일 로드
@@ -91,10 +100,9 @@ public class MainMenuController implements Initializable {
     }
 
 
-    
     // btn 2 클릭시
     @FXML
-    private void btn2ClickEvent(){
+    private void btn2ClickEvent() {
         System.out.println("btn2 click event");
         System.out.println("feedbackPage 이동합니다");
         Stage newStage = new Stage();
@@ -103,7 +111,7 @@ public class MainMenuController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/feedBackPage.fxml"));
             Parent root = loader.load();
 
-            System.out.println("send data => "+bookService);
+            System.out.println("send data => " + bookService);
 
             Stage currentStage = (Stage) btn2.getScene().getWindow();
             // 새로운 Scene 생성 후 현재 Stage에 설정
@@ -116,8 +124,83 @@ public class MainMenuController implements Initializable {
         }
     }
 
+    // btn 3 클릭시
+    @FXML
+    private void btn3ClickEvent() {
+        System.out.println("btn3 click event");
+        System.out.println("phoneAuthPage 이동합니다");
+        Stage newStage = new Stage();
+        try {
+            // 새로운 FXML 파일 로드
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/admin/phoneAuthPage.fxml"));
+            Parent root = loader.load();
 
-    //인기책 component 생성
+            System.out.println("send data => " + bookService);
+
+            Stage currentStage = (Stage) btn3.getScene().getWindow();
+            // 새로운 Scene 생성 후 현재 Stage에 설정
+            Scene scene = new Scene(root);
+            currentStage.setScene(scene);
+
+
+                // 책의 제목과 가격을 표시하는 Label 생성
+                Label titleLabel = new Label(book.getName());
+                Label priceLabel = new Label(String.valueOf(book.getPrice())); //int값이기 때문에 string으로 전환
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // btn 4 클릭시
+    @FXML
+    private void btn4ClickEvent() {
+        System.out.println("btn4 click event");
+        System.out.println("phoneAuthPage로 이동합니다");
+        Stage newStage = new Stage();
+        try {
+            // 새로운 FXML 파일 로드
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/admin/phoneAuthPage.fxml"));
+            Parent root = loader.load();
+
+            System.out.println("send data => " + bookService);
+
+            Stage currentStage = (Stage) btn4.getScene().getWindow();
+            // 새로운 Scene 생성 후 현재 Stage에 설정
+            Scene scene = new Scene(root);
+            currentStage.setScene(scene);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // btn 5 클릭시
+    @FXML
+    private void btn5ClickEvent() {
+        System.out.println("btn5 click event");
+        System.out.println("adminAuthPage로 이동합니다");
+        Stage newStage = new Stage();
+        try {
+            // 새로운 FXML 파일 로드
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/admin/adminAuthPage.fxml"));
+            Parent root = loader.load();
+
+            System.out.println("send data => " + bookService);
+
+            Stage currentStage = (Stage) btn5.getScene().getWindow();
+            // 새로운 Scene 생성 후 현재 Stage에 설정
+            Scene scene = new Scene(root);
+            currentStage.setScene(scene);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+  
+      //인기책 component 생성
     public void addBottomBook(){
             List<Book> books = bookService.getBookList();
             for(Book book : books){
@@ -127,12 +210,8 @@ public class MainMenuController implements Initializable {
                 imageView.setFitHeight(300);
                 imageView.setFitWidth(250);
     //            bookImages.getChildren().add(imageView);
-
-                // 책의 제목과 가격을 표시하는 Label 생성
-                Label titleLabel = new Label(book.getName());
-                Label priceLabel = new Label(String.valueOf(book.getPrice())); //int값이기 때문에 string으로 전환
-
-                // Vbox에 ImageView와 Label 추가
+              
+                              // Vbox에 ImageView와 Label 추가
                 VBox vbox = new VBox(imageView, titleLabel,priceLabel);
 
                 // HBox에 VBox 추가 어디에 추가할지
@@ -142,5 +221,7 @@ public class MainMenuController implements Initializable {
     }
 }
 
+
+}
 
 

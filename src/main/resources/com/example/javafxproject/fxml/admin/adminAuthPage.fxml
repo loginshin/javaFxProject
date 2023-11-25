@@ -19,7 +19,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <ImageView fitHeight="59.0" fitWidth="75.0" layoutX="271.0" layoutY="648.0" preserveRatio="true">
+      <ImageView fx:id="goMainBtn" onMouseClicked="#goMainBtnFunc" fitHeight="59.0" fitWidth="75.0" layoutX="271.0" layoutY="648.0" preserveRatio="true">
          <image>
             <Image url="@../../img/Home.png" />
          </image>

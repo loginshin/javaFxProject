@@ -27,17 +27,17 @@
             <Image url="@../img/FeedBackButtonimg.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="82.0" fitWidth="98.0" layoutX="447.0" layoutY="26.0" preserveRatio="true">
+      <ImageView fx:id="btn5" onMouseClicked="#btn5ClickEvent" fitHeight="82.0" fitWidth="98.0" layoutX="447.0" layoutY="26.0" preserveRatio="true">
          <image>
             <Image url="@../img/AdminModeButtonimg2.png" />
          </image>
       </ImageView>
-      <ImageView layoutX="181.0" layoutY="224.0">
+      <ImageView fx:id="btn3" onMouseClicked="#btn3ClickEvent" layoutX="181.0" layoutY="224.0">
          <image>
             <Image url="@../img/RentButtonimg.png" />
          </image>
       </ImageView>
-      <ImageView layoutX="320.0" layoutY="224.0">
+      <ImageView fx:id="btn4" onMouseClicked="#btn3ClickEvent" layoutX="320.0" layoutY="224.0">
          <image>
             <Image url="@../img/ReturnButtonimg.png" />
          </image>
