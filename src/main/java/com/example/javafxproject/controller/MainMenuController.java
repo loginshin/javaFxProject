@@ -201,8 +201,9 @@ public class MainMenuController implements Initializable {
       //인기책 component 생성
     public void addBottomBook(){
             List<Book> books = bookService.getBookList();
+            int count = 0;
             for(Book book : books){
-                System.out.println("populer 띄울 이미지는"+book.getImgUrl());
+//                System.out.println("populer 띄울 이미지는"+book.getImgUrl());
                 //책 이미지 표시 ImageView
                 ImageView imageView = new ImageView(new Image(book.getImgUrl()));
                 imageView.setFitHeight(300);
@@ -218,6 +219,13 @@ public class MainMenuController implements Initializable {
 
                 // HBox에 VBox 추가 어디에 추가할지
                 bookImages.getChildren().add(vbox);
+
+
+                count++;
+                if(count >10){
+                    return;
+                }
+
             }
     }
 }

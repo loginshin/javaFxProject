@@ -378,6 +378,7 @@ public class HelloController implements Initializable {
                 "2. 파이팅혼공TV 유튜브 채널을 통해 무료 학습!\n" +
                 "3. 충분한 학습이 없어도 합격권 점수를 획득할 수 있도록 구성!",
                 "PD 혼공쌤", "기술/공학", "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791191292879.jpg");
+
         Book book75 = new Book("귀가 트이는 영어(2023년 12월호)", 10450, "▶ 본 교재 9월호부터 CD 제공이 중단됩니다.\n" +
                 "본문듣기 음원은 동아출판 홈페이지(PC와 모바일) 및 EBS 어학 FM App 에서 들으실 수 있습니다.\n" +
                 "동아출판은 환경 보호를 위하여 최선을 다하겠습니다.\n" +
@@ -386,8 +387,8 @@ public class HelloController implements Initializable {
                 "이현석", "잡지", "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/3904000420073.jpg");
         Book book76 = new Book("기도수첩", 4750, "『기도수첩(Remnant)』는 하나님과 소통하는 시간을 갖게 해주는 잡지다. 하루 한 번 묵상할 수 있는 내용을 담았다.",
                 "생명 편집부", "잡지" ,"https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/3904000418698.jpg");
-        Book book77 = new Book("생명의 삶(2023년 12월호)(개역개정판)", 4750, "『생명의 삶』은 신구약 성경 전체를 묵상할 수 있도록 편집한 월간지다.",
-                "두란노 편집부", "잡지", "『생명의 삶』은 신구약 성경 전체를 묵상할 수 있도록 편집한 월간지다.");
+//        Book book77 = new Book("생명의 삶(2023년 12월호)(개역개정판)", 4750, "『생명의 삶』은 신구약 성경 전체를 묵상할 수 있도록 편집한 월간지다.",
+//                "두란노 편집부", "잡지", "『생명의 삶』은 신구약 성경 전체를 묵상할 수 있도록 편집한 월간지다.");
         bookService.addBook(book1);
         bookService.addBook(book2);
         bookService.addBook(book3);
@@ -408,6 +409,65 @@ public class HelloController implements Initializable {
         bookService.addBook(book18);
         bookService.addBook(book19);
         bookService.addBook(book20);
+        bookService.addBook(book21);
+        bookService.addBook(book22);
+        bookService.addBook(book23);
+        bookService.addBook(book24);
+        bookService.addBook(book25);
+        bookService.addBook(book26);
+        bookService.addBook(book27);
+        bookService.addBook(book28);
+        bookService.addBook(book29);
+        bookService.addBook(book30);
+        bookService.addBook(book31);
+        bookService.addBook(book32);
+        bookService.addBook(book33);
+        bookService.addBook(book34);
+        bookService.addBook(book35);
+        bookService.addBook(book36);
+        bookService.addBook(book37);
+        bookService.addBook(book38);
+        bookService.addBook(book39);
+        bookService.addBook(book40);
+        bookService.addBook(book41);
+        bookService.addBook(book42);
+        bookService.addBook(book43);
+        bookService.addBook(book44);
+        bookService.addBook(book45);
+        bookService.addBook(book46);
+        bookService.addBook(book47);
+        bookService.addBook(book48);
+        bookService.addBook(book49);
+        bookService.addBook(book50);
+        bookService.addBook(book51);
+        bookService.addBook(book52);
+        bookService.addBook(book53);
+        bookService.addBook(book54);
+        bookService.addBook(book55);
+        bookService.addBook(book56);
+        bookService.addBook(book57);
+        bookService.addBook(book58);
+        bookService.addBook(book59);
+        bookService.addBook(book60);
+        bookService.addBook(book61);
+        bookService.addBook(book62);
+        bookService.addBook(book63);
+        bookService.addBook(book64);
+        bookService.addBook(book65);
+        bookService.addBook(book66);
+        bookService.addBook(book67);
+        bookService.addBook(book68);
+        bookService.addBook(book69);
+        bookService.addBook(book70);
+        bookService.addBook(book71);
+        bookService.addBook(book72);
+        bookService.addBook(book73);
+        bookService.addBook(book74);
+        bookService.addBook(book75);
+        bookService.addBook(book76);
+
+
+
 
         System.out.println(bookService.getBookList().get(0).getName()); // 첫번째 책 이름
 
