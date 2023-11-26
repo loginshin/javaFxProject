@@ -145,7 +145,38 @@ public class BookListController implements Initializable {
         ImageView imageView = new ImageView(new Image(book.getImgUrl()));
         imageView.setFitHeight(300);
         imageView.setFitWidth(250);
-        //          bookImages.getChildren().add(imageView);
+
+        // 이미지 뷰 클릭시 이벤트 처리
+        imageView.setOnMouseClicked(event -> {
+            try {
+                // 새로운 FXML 파일 로드
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/bookInfoPage.fxml"));
+                Parent root = loader.load();
+
+                // 컨트롤러에 책 데이터 전달
+                BookInfoController controller = loader.getController();
+                controller.setBook(book);
+
+                // 새로운 Scene 생성 후 현재 Stage에 설정 => 기존창에 바꾸기
+//                        Stage currentStage = (Stage) imageView.getScene().getWindow();
+//                        Scene scene = new Scene(root);
+//                        currentStage.setScene(scene);
+
+                Stage newStage = new Stage();
+
+                //새 창 띄우기
+                Scene scene = new Scene(root);
+                newStage.setScene(scene);
+
+                newStage.show();
+
+
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+
+        });
+
 
         // 책의 제목과 가격을 표시하는 Label 생성
         Label titleLabel = new Label(book.getName());

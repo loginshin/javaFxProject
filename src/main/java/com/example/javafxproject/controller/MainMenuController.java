@@ -220,10 +220,18 @@ public class MainMenuController implements Initializable {
                         BookInfoController controller = loader.getController();
                         controller.setBook(book);
 
-                        // 새로운 Scene 생성 후 현재 Stage에 설정
-                        Stage currentStage = (Stage) imageView.getScene().getWindow();
+                        // 새로운 Scene 생성 후 현재 Stage에 설정 => 기존창에 바꾸기
+//                        Stage currentStage = (Stage) imageView.getScene().getWindow();
+//                        Scene scene = new Scene(root);
+//                        currentStage.setScene(scene);
+
+                        Stage newStage = new Stage();
+
+                        //새 창 띄우기
                         Scene scene = new Scene(root);
-                        currentStage.setScene(scene);
+                        newStage.setScene(scene);
+
+                        newStage.show();
 
                     }catch (IOException e){
                         e.printStackTrace();

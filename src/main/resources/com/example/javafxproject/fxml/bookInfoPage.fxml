@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-
-<AnchorPane fx:controller="com.example.javafxproject.controller.BookInfoController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.controller.BookInfoController">
    <children>
-      <ImageView fitHeight="64.0" fitWidth="116.0" layoutX="246.0" layoutY="716.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/HomeIcon.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="374.0" fitWidth="267.0" layoutX="177.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bookImage" fitHeight="374.0" fitWidth="267.0" layoutX="177.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/Book2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="46.0" fitWidth="175.0" layoutX="431.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Buy.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="25.0" fitWidth="178.0" layoutX="64.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
@@ -27,19 +22,14 @@
             <Image url="@../img/Overview.png" />
          </image>
       </ImageView>
-      <TextArea layoutX="64.0" layoutY="493.0" prefHeight="141.0" prefWidth="480.0" text="The Catcher in the Rye is a novel by J. D. Salinger,&#10;partially published in serial form in 1945–1946 and&#10;as a novel in 1951. It was originally intended for adu &#10;lts but is often read by adolescents for its theme of&#10;angst, alienation and as a critique......">
+      <Label fx:id="bookInfo" layoutX="64.0" layoutY="493.0" prefWidth="480.0" wrapText="true">
          <font>
             <Font size="17.0" />
          </font>
-      </TextArea>
-      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="49.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+      </Label>
+      <ImageView fx:id="closeBtn" onMouseClicked="#closeFunc" fitHeight="25.0" fitWidth="35.0" layoutX="49.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/Back.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="46.0" fitWidth="175.0" layoutX="228.0" layoutY="654.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/Buy.png" />
          </image>
       </ImageView>
    </children>
