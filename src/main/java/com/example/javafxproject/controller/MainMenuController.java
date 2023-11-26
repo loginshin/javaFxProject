@@ -52,7 +52,7 @@ public class MainMenuController implements Initializable {
 //    private BookService bookService;
     
 
-    HelloController helloController = new HelloController();
+//    HelloController helloController = new HelloController();
 
 
 
@@ -135,7 +135,7 @@ public class MainMenuController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/admin/phoneAuthPage.fxml"));
             Parent root = loader.load();
 
-            System.out.println("send data => " + bookService);
+//            System.out.println("send data => " + bookService);
 
             Stage currentStage = (Stage) btn3.getScene().getWindow();
             // 새로운 Scene 생성 후 현재 Stage에 설정
@@ -161,7 +161,7 @@ public class MainMenuController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/admin/phoneAuthPage.fxml"));
             Parent root = loader.load();
 
-            System.out.println("send data => " + bookService);
+//            System.out.println("send data => " + bookService);
 
             Stage currentStage = (Stage) btn4.getScene().getWindow();
             // 새로운 Scene 생성 후 현재 Stage에 설정

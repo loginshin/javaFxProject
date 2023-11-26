@@ -1,5 +1,7 @@
 package com.example.javafxproject.controller;
 
+import com.example.javafxproject.dto.FeedBack;
+import com.example.javafxproject.service.FeedBackService;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -19,7 +21,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
+
+import static com.example.javafxproject.controller.HelloController.feedBackService;
 
 public class FeedBackController implements Initializable {
 
@@ -40,48 +45,69 @@ public class FeedBackController implements Initializable {
     private ImageView goMainBtn; // 홈으로 돌아가는 버튼
 
 
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // 초기화 코드 (필요에 따라 추가)
+        // 리스트에 피드백 추가 // => 리스팅 (리스트에 추가하는 작업) => View 리스트들을 전부 보여주는작업
+        listing();
 
     }
 
-    // "추가" 버튼 클릭 시 실행되는 메서드
+    // "추가" 버튼 클릭 시 실행되는 메서드 => FeedBack 추가하기
     @FXML
-    public void addItem() {
-        // 1. 텍스트 필드에 있는 값을 가지고 온다.
+    public void addFeedBack(){
+        // 1. 텍스트 필드에 있는 값을 가지고 온다. 2. 피드백 데이터에List 추가
         String getText = newItemTextField.getText();
         System.out.println(getText);
+        FeedBack feedBack = new FeedBack();
+        feedBack.setFeedBack(getText); //적은것
+        feedBack.setSolve(false); //미해결로 새로추가
+        feedBackService.addFeedBack(feedBack);
+        listing();
+    }
+
+    //FeedBackList FeedBack List정리하기 =>
+    public void listing(){
+
+        //VBox를 만들어서 scrllpane에 추가
+        VBox content = new VBox();
+        content.setSpacing(30);
+        feedBackContainer.setContent(content);
+
+        //만약 feedback리스트가 있다면 화면에 미리 띄우기
+        List<FeedBack> feedBacks = feedBackService.getFeedBackList();
+        System.out.println(feedBacks.size()!=0);
+        if(feedBacks.size()!=0) {
+            for (int i = 0; i < feedBacks.size(); i++) {
+                String getText = feedBacks.get(i).getFeedBack();
+                System.out.println(getText);
+                feedBackView(getText,content);
+
+            }
+
+        }
+
+    }
+
+    //FeedBack View 보여주는곳 fxml
+    public void feedBackView(String getText, VBox content) {
 
         // 2. Label을 포함한 VBox를 생성하고 스타일을 지정한다.
         Label titleLabel = new Label(getText);
         titleLabel.setStyle("-fx-alignment: CENTER;");
         VBox newContent = new VBox(titleLabel);
         newContent.setPadding(new Insets(10)); // 패딩값 설정
-        newContent.setBackground(new Background(new BackgroundFill(Color.LIGHTGRAY, CornerRadii.EMPTY, Insets.EMPTY))); // 배경색 설정
-
-        // 3. 이전 내용을 포함한 VBox를 가져온다.
-        VBox existingContent = (VBox) feedBackContainer.getContent();
-
-
-        // 4. 새로운 내용을 위로 추가한 후, setContent로 설정한다.
-        // null 일때 값을 그냥 집어 넣는다.
-        if(existingContent ==null){
-            feedBackContainer.setContent(newContent);
-
-            // 5. 필드 초기화
-            newItemTextField.clear();
-        } else {
-            existingContent.getChildren().add(0, newContent);
-            feedBackContainer.setContent(existingContent);
-
-            // 5. 필드 초기화
-            newItemTextField.clear();
-        }
-
+        newContent.setBackground(new Background(new BackgroundFill(Color.LIGHTGRAY,new CornerRadii(10.0) , Insets.EMPTY))); // 배경색 설정
+        content.getChildren().add(0, newContent);
+        newItemTextField.clear(); //텍스트 필드 비우기
 
 
     }
+
+
+
+
 
 
 

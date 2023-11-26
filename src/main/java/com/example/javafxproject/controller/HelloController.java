@@ -410,6 +410,10 @@ public class HelloController implements Initializable {
         bookService.addBook(book20);
 
         System.out.println(bookService.getBookList().get(0).getName()); // 첫번째 책 이름
+
+        FeedBack feedBack = new FeedBack("어서오세요 피드백을 남겨보세요",false);
+        feedBackService.addFeedBack(feedBack);
+
     }
 
 
@@ -429,9 +433,9 @@ public class HelloController implements Initializable {
             Parent root = loader.load();
 
             // 새로운 컨트롤러의 인스턴스를 가져옴
-            MainMenuController controller = loader.getController();
+//            MainMenuController controller = loader.getController();
 //            controller.setBookService(bookService); // 새로운 컨트롤러에 BookService 객체 전달
-            System.out.println("send data => "+bookService);
+//            System.out.println("send data => "+bookService);
             
             
             // BookService 객체를 새로운 컨트롤러에 전달
