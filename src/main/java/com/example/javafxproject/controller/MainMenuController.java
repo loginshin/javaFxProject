@@ -71,7 +71,6 @@ public class MainMenuController implements Initializable {
 
         // 책 데이터있다면 Hbox에 띄우기
         addBottomBook();
-
     }
 
 
@@ -141,10 +140,6 @@ public class MainMenuController implements Initializable {
             // 새로운 Scene 생성 후 현재 Stage에 설정
             Scene scene = new Scene(root);
             currentStage.setScene(scene);
-
-
-
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -197,6 +192,7 @@ public class MainMenuController implements Initializable {
             e.printStackTrace();
         }
     }
+
   
       //인기책 component 생성
     public void addBottomBook(){

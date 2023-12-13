@@ -40,3 +40,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### api 키 값 저장 => git에 올라가면 안됨
+config.java

@@ -102,7 +102,6 @@ public class FeedBackController implements Initializable {
         content.getChildren().add(0, newContent);
         newItemTextField.clear(); //텍스트 필드 비우기
 
-
     }
 
 
