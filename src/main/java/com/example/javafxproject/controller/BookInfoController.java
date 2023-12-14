@@ -37,7 +37,7 @@ public class BookInfoController implements Initializable {
     private Label bookInfo;
 
     @FXML
-    private ProgressBar loadingProgressBar;
+    private ImageView loadingImageView;
 
 
     public void setBook(Book book) {
@@ -71,7 +71,7 @@ public class BookInfoController implements Initializable {
             Platform.runLater(() ->{
                 System.out.println(gptResponse);
 
-                loadingProgressBar.setVisible(false);
+                loadingImageView.setVisible(false);
 
                 //추가적인 작업 수행 ↓↓↓↓
 
@@ -81,7 +81,7 @@ public class BookInfoController implements Initializable {
 
 
         // 페이지 들어오면 로딩 애니메이션 표시
-        loadingProgressBar.setVisible(true);
+        loadingImageView.setVisible(true);
         //Task 실행
         new Thread(gptTask).start();
 

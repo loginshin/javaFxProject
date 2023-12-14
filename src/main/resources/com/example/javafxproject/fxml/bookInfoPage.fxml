@@ -35,5 +35,11 @@
             <Image url="@../img/Back.png" />
          </image>
       </ImageView>
+
+      <ImageView fx:id="loadingImageView"  fitHeight="50" fitWidth="50.0" layoutX="270" layoutY="700" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/loadingGif.gif" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
