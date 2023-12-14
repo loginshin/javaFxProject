@@ -1,9 +1,13 @@
 package com.example.javafxproject.controller;
 
 import com.example.javafxproject.dto.Book;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -31,6 +35,10 @@ public class BookInfoController implements Initializable {
     @FXML
     private Label bookInfo;
 
+    @FXML
+    private ProgressBar loadingProgressBar;
+
+
     public void setBook(Book book) {
         this.book = book;
         indicationImage(this.book.getImgUrl());
@@ -39,12 +47,36 @@ public class BookInfoController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //이미지 데이터가 있으면 이미지 가져와서 바꾸기
 
-//gpt에 값 넣어보기
-        System.out.println("wellcome gpt test page");
+        // 페이지 들어오면 로딩 애니메이션 표시
+        loadingProgressBar.setVisible(true);
 
-        System.out.println(chatGPT("마흔에 읽는 쇼펜하우어 책에 대해 설명해줘"));
+        String response = chatGPT("sayHelloWold");
+
+        //Gson을 사용하여 Json데이터 파싱
+        JsonObject jsonResponse = JsonParser.parseString(response).getAsJsonObject();
+        // JSON 형식 중 답변 받는 부분만 프린트해서 출력
+        String gptResponse = jsonResponse.getAsJsonArray("choices")
+                .get(0).getAsJsonObject()
+                .getAsJsonObject("message")
+                .get("content").getAsString();
+
+        Platform.runLater(() -> {
+            // 값 표시
+            System.out.println(gptResponse);
+
+            //로딩 애니메이션 감추기
+            loadingProgressBar.setVisible(false);
+
+            // ui 업데이트 작업 ↓↓ gpt 값 fxml에 추가하기
+            // indicationText(gptResponse);
+            
+
+        });
+
+
+
+
     }
 
     //이미지 최신화
@@ -64,10 +96,10 @@ public class BookInfoController implements Initializable {
     }
 
 
- // gpt 호출
+ // gpt api사용 메서드
     public static String chatGPT(String prompt) {
         String url = "https://api.openai.com/v1/chat/completions";
-        String apiKey = configGptKey;
+        String apiKey = configGptKey; // config파일로 따로 관리 gitegnore에서 필터링
         String model = "gpt-3.5-turbo";
 
         try {
@@ -98,18 +130,18 @@ public class BookInfoController implements Initializable {
             br.close();
 
             // calls the method to extract the message.
-            return extractMessageFromJSONResponse(response.toString());
+            return response.toString();
 
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
-    public static String extractMessageFromJSONResponse(String response){
-        int start = response.indexOf("content")+11;
-        int end = response.indexOf("\"",start);
-        return response.substring(start, end);
-
-
-    }
+//    public static String extractMessageFromJSONResponse(String response){
+//        int start = response.indexOf("content")+11;
+//        int end = response.indexOf("\"",start);
+//        return response.substring(start, end);
+//
+//
+//    }
 
 }
