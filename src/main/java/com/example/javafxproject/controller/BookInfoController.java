@@ -4,7 +4,6 @@ import com.example.javafxproject.dto.Book;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -17,8 +16,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static com.example.javafxproject.config.configGptKey;
-import static com.example.javafxproject.config.gptKey;
+import static com.example.javafxproject.Config.configGptKey;
 
 public class BookInfoController implements Initializable {
 
