@@ -4,6 +4,7 @@ import com.example.javafxproject.dto.Book;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import javafx.application.Platform;
+import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -47,34 +48,42 @@ public class BookInfoController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        String prompt = "sayHelloWold"; // ←←←←←←←←←← 여기에 gpt에게 요청
 
-        // 페이지 들어오면 로딩 애니메이션 표시
-        loadingProgressBar.setVisible(true);
+        // gpt답변을 받지 않아도 들어올 수 있도록 Task 생성 → 쓰레드 사용 → 익명함수로 실행문 바로 실행
+        Task<String> gptTask = new Task<>() {
+          @Override
+          protected String call() throws Exception {
+              return chatGPT(prompt);
+          }
+        };
 
-        String response = chatGPT("sayHelloWold");
+        // gptTask가 완료되면 실행되는 콜백
+        gptTask.setOnSucceeded(event -> {
+            //Gson을 사용하여 Json데이터 파싱
+            JsonObject jsonResponse = JsonParser.parseString(gptTask.getValue()).getAsJsonObject();
+            // JSON 형식 중 답변 받는 부분만 프린트해서 출력
+            String gptResponse = jsonResponse.getAsJsonArray("choices")
+                    .get(0).getAsJsonObject()
+                    .getAsJsonObject("message")
+                    .get("content").getAsString();
 
-        //Gson을 사용하여 Json데이터 파싱
-        JsonObject jsonResponse = JsonParser.parseString(response).getAsJsonObject();
-        // JSON 형식 중 답변 받는 부분만 프린트해서 출력
-        String gptResponse = jsonResponse.getAsJsonArray("choices")
-                .get(0).getAsJsonObject()
-                .getAsJsonObject("message")
-                .get("content").getAsString();
+            Platform.runLater(() ->{
+                System.out.println(gptResponse);
 
-        Platform.runLater(() -> {
-            // 값 표시
-            System.out.println(gptResponse);
+                loadingProgressBar.setVisible(false);
 
-            //로딩 애니메이션 감추기
-            loadingProgressBar.setVisible(false);
+                //추가적인 작업 수행 ↓↓↓↓
 
-            // ui 업데이트 작업 ↓↓ gpt 값 fxml에 추가하기
-            // indicationText(gptResponse);
-            
 
+            });
         });
 
 
+        // 페이지 들어오면 로딩 애니메이션 표시
+        loadingProgressBar.setVisible(true);
+        //Task 실행
+        new Thread(gptTask).start();
 
 
     }
