@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.controller.BookInfoController">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.controller.BookInfoController">
    <content>
       <VBox spacing="10"> <!-- VBox를 사용하여 세로로 여러 컨트롤을 추가 -->
          <AnchorPane>
@@ -40,24 +43,31 @@
                   <Image url="@../img/Back.png" />
                </image>
             </ImageView>
+            <ImageView fitHeight="49.0" fitWidth="151.0" layoutX="403.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="45.0" fitWidth="123.0" layoutX="403.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="61.0" fitWidth="145.0" layoutX="431.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Rent.png" />
+               </image>
+            </ImageView>
          </AnchorPane>
 
          <Label style="-fx-padding: 60 0 0 60;">
             gpt의 한마디
             <font>
-               <Font size="30"/>
+               <Font size="30" />
             </font>
          </Label>
-            <Label fx:id="gptText" style="-fx-padding: 60 0 0 60;"  prefWidth="480" wrapText="true">
+            <Label fx:id="gptText" prefWidth="480" style="-fx-padding: 60 0 0 60;" wrapText="true">
                <font>
-                  <Font size="18"/>
+                  <Font size="18" />
                </font>
 
             </Label>
 
 
        <StackPane>  <!-- loadingImageView를 VBox에 추가 -->
-         <ImageView fx:id="loadingImageView"  fitHeight="50" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fx:id="loadingImageView" fitHeight="50" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@../img/loadingGif.gif" />
             </image>
@@ -66,4 +76,3 @@
       </VBox>
    </content>
 </ScrollPane>
-

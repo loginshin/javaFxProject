@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class PhoneAuthController implements Initializable {
+public class EmailAuthController implements Initializable {
 
     @FXML
     private ImageView goMainBtn;

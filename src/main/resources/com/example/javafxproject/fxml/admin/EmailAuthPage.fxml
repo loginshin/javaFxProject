@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.controller.EmailAuthController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9d9d9d" height="53.0" layoutX="128.0" layoutY="579.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 40; -fx-arc-width: 40;" width="347.0" />
+      <ImageView fitHeight="541.0" fitWidth="409.0" layoutX="97.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/EmailAuthimg.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9d9d9d" height="43.0" layoutX="214.0" layoutY="646.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 40; -fx-arc-width: 40;" width="192.0" />
+      <ImageView fx:id="goMainBtn" fitHeight="68.0" fitWidth="154.0" layoutX="245.0" layoutY="718.0" onMouseClicked="#goMainBtnFunc" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/HomeIcon.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="emailTF" layoutX="152.0" layoutY="588.0" prefHeight="36.0" prefWidth="300.0" />
+      <TextField fx:id="codeTF" layoutX="230.0" layoutY="657.0" />
+      <ImageView fitHeight="53.0" fitWidth="53.0" layoutX="480.0" layoutY="579.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/EmailSendimg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="43.0" fitWidth="47.0" layoutX="409.0" layoutY="646.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/Checkiconimg.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="23.0" layoutY="588.0" prefHeight="36.0" prefWidth="129.0" text="  Naver-Email">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="171.0" layoutY="659.0" text="Code">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
