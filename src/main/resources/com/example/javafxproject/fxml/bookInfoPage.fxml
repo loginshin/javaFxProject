@@ -5,7 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.controller.BookInfoController">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.controller.BookInfoController">
+   <content>
+<AnchorPane>
    <children>
       <ImageView fx:id="bookImage" fitHeight="374.0" fitWidth="267.0" layoutX="177.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -43,3 +45,5 @@
       </ImageView>
    </children>
 </AnchorPane>
+   </content>
+</ScrollPane>

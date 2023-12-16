@@ -27,6 +27,9 @@ public class BookInfoController implements Initializable {
 
     //책 데이터 dto 받아오기
     Book book;
+
+    public String prompt;
+
     @FXML
     private ImageView closeBtn;
 
@@ -42,20 +45,27 @@ public class BookInfoController implements Initializable {
 
     public void setBook(Book book) {
         this.book = book;
+
+        // 책 이미지와 설명 표시
         indicationImage(this.book.getImgUrl());
         indicationText(this.book.getInfo());
-    }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        String prompt = "sayHelloWold"; // ←←←←←←←←←← 여기에 gpt에게 요청
+        System.out.println(this.book.getInfo());
+
+
+        String prompt = "너는 책을 판매하는 키오스크야. 책에대한 설명을 간단하게 제공해줄테니까 333자 내외로 책을 팔수 있는 문구를 작성해줘" +
+                "조건은 1. 사람들이 구매욕을 자극할만한 키워드를 넣을것" +
+                "2. 개조식으로 3개정도 어떤사람에게 이책이 좋은지 적어줄것" +
+                "3. 책을 만든 작자의 의도를 파악할것" +
+                "4. 한국말로 말해줄것  " +
+                " 책내용 → "+ this.book.getInfo(); // ←←←←←←←←←← 여기에 gpt에게 요청
 
         // gpt답변을 받지 않아도 들어올 수 있도록 Task 생성 → 쓰레드 사용 → 익명함수로 실행문 바로 실행
         Task<String> gptTask = new Task<>() {
-          @Override
-          protected String call() throws Exception {
-              return chatGPT(prompt);
-          }
+            @Override
+            protected String call() throws Exception {
+                return chatGPT(prompt);
+            }
         };
 
         // gptTask가 완료되면 실행되는 콜백
@@ -85,6 +95,11 @@ public class BookInfoController implements Initializable {
         //Task 실행
         new Thread(gptTask).start();
 
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
 
     }
 
@@ -97,6 +112,8 @@ public class BookInfoController implements Initializable {
     public void indicationText(String text){
         bookInfo.setText(text);
     }
+
+    
 
     @FXML
     public void closeFunc(){
