@@ -5,6 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
+
 <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.controller.BookInfoController">
    <content>
       <VBox spacing="10"> <!-- VBox를 사용하여 세로로 여러 컨트롤을 추가 -->
@@ -16,7 +17,7 @@
                </image>
             </ImageView>
 
-            <ImageView fitHeight="46.0" fitWidth="175.0" layoutX="431.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="buyBtn" fitHeight="46.0" fitWidth="175.0" layoutX="431.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/Buy.png" />
                </image>
@@ -65,3 +66,4 @@
       </VBox>
    </content>
 </ScrollPane>
+

@@ -6,7 +6,10 @@ import com.google.gson.JsonParser;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
@@ -20,6 +23,7 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ResourceBundle;
+
 
 import static com.example.javafxproject.Config.configGptKey;
 
@@ -44,6 +48,9 @@ public class BookInfoController implements Initializable {
 
     @FXML
     private Label gptText;
+
+
+    @FXML private ImageView buyBtn;
 
 
     public void setBook(Book book) {
@@ -129,6 +136,28 @@ public class BookInfoController implements Initializable {
     public void closeFunc(){
         Stage stage = (Stage) closeBtn.getScene().getWindow();
         stage.close();
+    }
+    @FXML
+    private void buyBtnClickEvent() {
+        Stage newStage = new Stage();
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/purchaseCompletedPage.fxml"));
+            Parent root = loader.load();
+
+            // 컨트롤러 가져오고 책 설정
+            PurchaseCompletedController controller = loader.getController();
+            controller.setBook(book);
+
+            Stage currentStage = (Stage) buyBtn.getScene().getWindow();
+
+            Scene scene = new Scene(root);
+            currentStage.setScene(scene);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
 
