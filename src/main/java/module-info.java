@@ -1,6 +1,7 @@
 module com.example.javafxproject {
     requires javafx.controls;
     requires javafx.fxml;
+    requires com.google.gson;
 
 
     opens com.example.javafxproject to javafx.fxml;
