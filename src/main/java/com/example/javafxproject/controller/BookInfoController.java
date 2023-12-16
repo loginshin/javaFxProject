@@ -42,6 +42,9 @@ public class BookInfoController implements Initializable {
     @FXML
     private ImageView loadingImageView;
 
+    @FXML
+    private Label gptText;
+
 
     public void setBook(Book book) {
         this.book = book;
@@ -83,7 +86,10 @@ public class BookInfoController implements Initializable {
 
                 loadingImageView.setVisible(false);
 
-                //추가적인 작업 수행 ↓↓↓↓
+                // 추가적인 작업 수행 ↓↓↓↓
+                // loading Animation Off 하면서 텍스트 표시 메서드 실행하면서 매개변수로 보내기
+                indicationGptText(gptResponse);
+
 
 
             });
@@ -93,7 +99,7 @@ public class BookInfoController implements Initializable {
         // 페이지 들어오면 로딩 애니메이션 표시
         loadingImageView.setVisible(true);
         //Task 실행
-        new Thread(gptTask).start();
+        new Thread(gptTask).start(); // Task 지정해줬으니 이제 실행해준다.
 
     }
 
@@ -113,7 +119,11 @@ public class BookInfoController implements Initializable {
         bookInfo.setText(text);
     }
 
-    
+    //gpt Text 표시하기
+    public void indicationGptText(String gptText){
+        this.gptText.setText(gptText);
+    }
+
 
     @FXML
     public void closeFunc(){

@@ -7,43 +7,61 @@
 
 <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.controller.BookInfoController">
    <content>
-<AnchorPane>
-   <children>
-      <ImageView fx:id="bookImage" fitHeight="374.0" fitWidth="267.0" layoutX="177.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/Book2.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="46.0" fitWidth="175.0" layoutX="431.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/Buy.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="178.0" layoutX="64.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/Overview.png" />
-         </image>
-      </ImageView>
-      <Label fx:id="bookInfo" layoutX="64.0" layoutY="493.0" prefWidth="480.0" wrapText="true">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
+      <VBox spacing="10"> <!-- VBox를 사용하여 세로로 여러 컨트롤을 추가 -->
+         <AnchorPane>
+            <!-- 기존 컨트롤들 -->
+            <ImageView fx:id="bookImage" fitHeight="374.0" fitWidth="267.0" layoutX="177.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Book2.png" />
+               </image>
+            </ImageView>
 
-      <ProgressBar fx:id="loadingProgressBar" progress="0.0" visible="false" />
+            <ImageView fitHeight="46.0" fitWidth="175.0" layoutX="431.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Buy.png" />
+               </image>
+            </ImageView>
 
-      <ImageView fx:id="closeBtn" onMouseClicked="#closeFunc" fitHeight="25.0" fitWidth="35.0" layoutX="49.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/Back.png" />
-         </image>
-      </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="178.0" layoutX="64.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Overview.png" />
+               </image>
+            </ImageView>
 
-      <ImageView fx:id="loadingImageView"  fitHeight="50" fitWidth="50.0" layoutX="270" layoutY="700" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/loadingGif.gif" />
-         </image>
-      </ImageView>
-   </children>
-</AnchorPane>
+            <Label fx:id="bookInfo" layoutX="64.0" layoutY="493.0" prefWidth="480.0" wrapText="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+
+            <ImageView fx:id="closeBtn" fitHeight="25.0" fitWidth="35.0" layoutX="49.0" layoutY="36.0" onMouseClicked="#closeFunc" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Back.png" />
+               </image>
+            </ImageView>
+         </AnchorPane>
+
+         <Label style="-fx-padding: 60 0 0 60;">
+            gpt의 한마디
+            <font>
+               <Font size="30"/>
+            </font>
+         </Label>
+            <Label fx:id="gptText" style="-fx-padding: 60 0 0 60;"  prefWidth="480" wrapText="true">
+               <font>
+                  <Font size="18"/>
+               </font>
+
+            </Label>
+
+
+       <StackPane>  <!-- loadingImageView를 VBox에 추가 -->
+         <ImageView fx:id="loadingImageView"  fitHeight="50" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../img/loadingGif.gif" />
+            </image>
+         </ImageView>
+       </StackPane>
+      </VBox>
    </content>
 </ScrollPane>
