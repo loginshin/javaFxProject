@@ -11,7 +11,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -25,7 +24,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-import static com.example.javafxproject.config.gptKey;
+import static com.example.javafxproject.Config.configGptKey;
 
 public class BookInfoController implements Initializable {
 
@@ -164,7 +163,7 @@ public class BookInfoController implements Initializable {
  // gpt api사용 메서드
     public static String chatGPT(String prompt) {
         String url = "https://api.openai.com/v1/chat/completions";
-        String apiKey = gptKey; // config파일로 따로 관리 gitegnore에서 필터링
+        String apiKey = configGptKey; // config파일로 따로 관리 gitegnore에서 필터링
         String model = "gpt-3.5-turbo";
 
         try {
