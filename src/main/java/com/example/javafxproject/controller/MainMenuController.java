@@ -197,8 +197,8 @@ public class MainMenuController implements Initializable {
 //                System.out.println("populer 띄울 이미지는"+book.getImgUrl());
                 //책 이미지 표시 ImageView
                 ImageView imageView = new ImageView(new Image(book.getImgUrl()));
-                imageView.setFitHeight(300);
-                imageView.setFitWidth(250);
+                imageView.setFitHeight(200);
+                imageView.setFitWidth(150);
 
                 // 이미지 뷰 클릭시 이벤트 처리
                 imageView.setOnMouseClicked(event -> {

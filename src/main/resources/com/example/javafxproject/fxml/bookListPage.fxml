@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.controller.BookListController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.controller.BookListController">
    <children>
       <ImageView fitHeight="38.0" fitWidth="217.0" layoutX="199.0" layoutY="21.0" preserveRatio="true">
          <image>
             <Image url="@../img/Book List.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="goMainBtn" onMouseClicked="#goMainBtnFunc" fitHeight="61.0" fitWidth="86.0" layoutX="268.0" layoutY="654.0" preserveRatio="true">
+      <ImageView fx:id="goMainBtn" fitHeight="61.0" fitWidth="86.0" layoutX="269.0" layoutY="695.0" onMouseClicked="#goMainBtnFunc" preserveRatio="true">
          <image>
             <Image url="@../img/Home.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="24.0" fitWidth="290.0" layoutX="202.0" layoutY="732.0" preserveRatio="true">
+      <ImageView fitHeight="24.0" fitWidth="290.0" layoutX="204.0" layoutY="762.0" preserveRatio="true">
          <image>
             <Image url="@../img/Back to Menu.png" />
          </image>
@@ -32,7 +28,7 @@
                <children>
                   <HBox prefHeight="69.0" prefWidth="592.0">
                      <children>
-                        <ImageView fx:id="novelBtn" onMouseClicked="#novelBtnClick" fitHeight="50.0" fitWidth="50.0" preserveRatio="true">
+                        <ImageView fx:id="novelBtn" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#novelBtnClick" preserveRatio="true">
                            <image>
                               <Image url="@../img/GrayBlockimg.jpg" />
                            </image>
@@ -42,7 +38,7 @@
                               <Font name="Lucida Bright Demibold" size="14.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="societyBtn" onMouseClicked="#societyBtnClick" fitHeight="50.0" fitWidth="50.0" preserveRatio="true">
+                        <ImageView fx:id="societyBtn" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#societyBtnClick" preserveRatio="true">
                            <image>
                               <Image url="@../img/GrayBlockimg.jpg" />
                            </image>
@@ -52,7 +48,7 @@
                               <Font name="Lucida Bright Demibold" size="14.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="itBtn" onMouseClicked="#itBtnClick" fitHeight="50.0" fitWidth="50.0" preserveRatio="true">
+                        <ImageView fx:id="itBtn" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#itBtnClick" preserveRatio="true">
                            <image>
                               <Image url="@../img/GrayBlockimg.jpg" />
                            </image>
@@ -62,7 +58,7 @@
                               <Font name="Lucida Bright Demibold" size="14.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="economyBtn" onMouseClicked="#economyBtnClick" fitHeight="50.0" fitWidth="50.0" preserveRatio="true">
+                        <ImageView fx:id="economyBtn" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#economyBtnClick" preserveRatio="true">
                            <image>
                               <Image url="@../img/GrayBlockimg.jpg" />
                            </image>
@@ -76,7 +72,7 @@
                   </HBox>
                   <HBox prefHeight="68.0" prefWidth="596.0">
                      <children>
-                        <ImageView fx:id="historyBtn" onMouseClicked="#historyBtnClick" fitHeight="50.0" fitWidth="50.0" preserveRatio="true">
+                        <ImageView fx:id="historyBtn" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#historyBtnClick" preserveRatio="true">
                            <image>
                               <Image url="@../img/GrayBlockimg.jpg" />
                            </image>
@@ -86,7 +82,7 @@
                               <Font name="Lucida Bright Demibold" size="14.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="scienceBtn" onMouseClicked="#scienceBtnClick" fitHeight="50.0" fitWidth="50.0" preserveRatio="true">
+                        <ImageView fx:id="scienceBtn" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#scienceBtnClick" preserveRatio="true">
                            <image>
                               <Image url="@../img/GrayBlockimg.jpg" />
                            </image>
@@ -96,7 +92,7 @@
                               <Font name="Lucida Bright Demibold" size="14.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="engineeringBtn" onMouseClicked="#engineeringBtnClick" fitHeight="50.0" fitWidth="50.0" preserveRatio="true">
+                        <ImageView fx:id="engineeringBtn" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#engineeringBtnClick" preserveRatio="true">
                            <image>
                               <Image url="@../img/GrayBlockimg.jpg" />
                            </image>
@@ -106,7 +102,7 @@
                               <Font name="Lucida Bright Demibold" size="14.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="magazineBtn" onMouseClicked="#magazineBtnClick" fitHeight="50.0" fitWidth="50.0" preserveRatio="true">
+                        <ImageView fx:id="magazineBtn" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#magazineBtnClick" preserveRatio="true">
                            <image>
                               <Image url="@../img/GrayBlockimg.jpg" />
                            </image>
@@ -116,7 +112,7 @@
                               <Font name="Lucida Bright Demibold" size="14.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="comicBtn" onMouseClicked="#comicBtnClick" fitHeight="50.0" fitWidth="50.0" preserveRatio="true">
+                        <ImageView fx:id="comicBtn" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#comicBtnClick" preserveRatio="true">
                            <image>
                               <Image url="@../img/GrayBlockimg.jpg" />
                            </image>
@@ -132,9 +128,9 @@
             </VBox>
          </content>
       </ScrollPane>
-      <ScrollPane layoutX="4.0" layoutY="443.0" prefHeight="197.0" prefWidth="593.0">
+      <ScrollPane layoutX="4.0" layoutY="443.0" prefHeight="247.0" prefWidth="593.0">
          <content>
-            <HBox fx:id="indicationBox" prefHeight="192.0" prefWidth="590.0" >
+            <HBox fx:id="indicationBox" prefHeight="245.0" prefWidth="590.0">
             <!--                책 표시하는곳        -->
 
 

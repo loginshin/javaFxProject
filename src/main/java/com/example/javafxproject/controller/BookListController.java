@@ -143,8 +143,8 @@ public class BookListController implements Initializable {
     //책 표시 메서드
     public void indicationBook(Book book){
         ImageView imageView = new ImageView(new Image(book.getImgUrl()));
-        imageView.setFitHeight(300);
-        imageView.setFitWidth(250);
+        imageView.setFitHeight(200);
+        imageView.setFitWidth(150);
 
         // 이미지 뷰 클릭시 이벤트 처리
         imageView.setOnMouseClicked(event -> {
