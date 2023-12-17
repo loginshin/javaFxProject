@@ -27,11 +27,6 @@
             <Image url="@../img/FeedBackButtonimg.png" />
          </image>
       </ImageView>
-      <ImageView id="goGpt" fx:id="btn5" fitHeight="82.0" fitWidth="98.0" layoutX="447.0" layoutY="26.0" onMouseClicked="#btn5ClickEvent" preserveRatio="true">
-         <image>
-            <Image url="@../img/AdminModeButtonimg2.png" />
-         </image>
-      </ImageView>
       <ImageView fx:id="btn3" layoutX="181.0" layoutY="224.0" onMouseClicked="#btn3ClickEvent">
          <image>
             <Image url="@../img/RentButtonimg.png" />

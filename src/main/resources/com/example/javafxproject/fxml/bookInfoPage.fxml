@@ -16,7 +16,7 @@
                </image>
             </ImageView>
 
-            <ImageView fx:id="buyBtn" fitHeight="46.0" fitWidth="175.0" layoutX="431.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="buyBtn" fitHeight="46.0" fitWidth="175.0" layoutX="431.0" layoutY="79.0" onMouseClicked="#buyBtnClickEvent" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/Buy.png" />
                </image>
