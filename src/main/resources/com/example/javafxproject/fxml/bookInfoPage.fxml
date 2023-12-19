@@ -41,7 +41,7 @@
             </ImageView>
             <ImageView fitHeight="49.0" fitWidth="151.0" layoutX="403.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fitHeight="45.0" fitWidth="123.0" layoutX="403.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fitHeight="61.0" fitWidth="145.0" layoutX="431.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="rentBtn" fitHeight="61.0" fitWidth="145.0" layoutX="431.0" layoutY="149.0" onMouseClicked="#rentBtnClickEvent" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/Rent.png" />
                </image>

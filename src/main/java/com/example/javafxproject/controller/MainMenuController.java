@@ -30,8 +30,8 @@ public class MainMenuController implements Initializable {
     @FXML
     private ImageView btn2;
 
-    @FXML
-    private ImageView btn3;
+//    @FXML
+//    private ImageView btn3;
 
     @FXML
     private ImageView btn4;
@@ -118,27 +118,27 @@ public class MainMenuController implements Initializable {
         }
     }
 
-    // btn 3 클릭시
-    @FXML
-    private void btn3ClickEvent() {
-        System.out.println("btn3 click event");
-        System.out.println("phoneAuthPage 이동합니다");
-        Stage newStage = new Stage();
-        try {
-            // 새로운 FXML 파일 로드
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/admin/EmailAuthPage.fxml"));
-            Parent root = loader.load();
-
-//            System.out.println("send data => " + bookService);
-
-            Stage currentStage = (Stage) btn3.getScene().getWindow();
-            // 새로운 Scene 생성 후 현재 Stage에 설정
-            Scene scene = new Scene(root);
-            currentStage.setScene(scene);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+//    // btn 3 클릭시
+//    @FXML
+//    private void btn3ClickEvent() {
+//        System.out.println("btn3 click event");
+//        System.out.println("phoneAuthPage 이동합니다");
+//        Stage newStage = new Stage();
+//        try {
+//            // 새로운 FXML 파일 로드
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/admin/ReturnEmailAuthPage.fxml"));
+//            Parent root = loader.load();
+//
+////            System.out.println("send data => " + bookService);
+//
+//            Stage currentStage = (Stage) btn3.getScene().getWindow();
+//            // 새로운 Scene 생성 후 현재 Stage에 설정
+//            Scene scene = new Scene(root);
+//            currentStage.setScene(scene);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     // btn 4 클릭시
     @FXML
@@ -148,7 +148,7 @@ public class MainMenuController implements Initializable {
         Stage newStage = new Stage();
         try {
             // 새로운 FXML 파일 로드
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/admin/EmailAuthPage.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/admin/ReturnEmailAuthPage.fxml"));
             Parent root = loader.load();
 
 //            System.out.println("send data => " + bookService);
@@ -164,29 +164,29 @@ public class MainMenuController implements Initializable {
         }
     }
 
-    // btn 5 클릭시
-    @FXML
-    private void btn5ClickEvent() {
-        System.out.println("btn5 click event");
-        System.out.println("adminAuthPage로 이동합니다");
-        Stage newStage = new Stage();
-        try {
-            // 새로운 FXML 파일 로드
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/admin/adminAuthPage.fxml"));
-            Parent root = loader.load();
-
-            System.out.println("send data => " + bookService);
-
-            Stage currentStage = (Stage) btn5.getScene().getWindow();
-            // 새로운 Scene 생성 후 현재 Stage에 설정
-            Scene scene = new Scene(root);
-            currentStage.setScene(scene);
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+//    // btn 5 클릭시
+//    @FXML
+//    private void btn5ClickEvent() {
+//        System.out.println("btn5 click event");
+//        System.out.println("adminAuthPage로 이동합니다");
+//        Stage newStage = new Stage();
+//        try {
+//            // 새로운 FXML 파일 로드
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/admin/adminAuthPage.fxml"));
+//            Parent root = loader.load();
+//
+//            System.out.println("send data => " + bookService);
+//
+//            Stage currentStage = (Stage) btn5.getScene().getWindow();
+//            // 새로운 Scene 생성 후 현재 Stage에 설정
+//            Scene scene = new Scene(root);
+//            currentStage.setScene(scene);
+//
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
   
       //인기책 component 생성

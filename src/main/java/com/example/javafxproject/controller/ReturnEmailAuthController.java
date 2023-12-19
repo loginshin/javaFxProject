@@ -19,7 +19,7 @@ import java.util.Properties;
 import java.util.Random;
 import java.util.ResourceBundle;
 
-public class EmailAuthController implements Initializable {
+public class ReturnEmailAuthController implements Initializable {
 
     @FXML
     private ImageView goMainBtn;
@@ -75,7 +75,7 @@ public class EmailAuthController implements Initializable {
     private void sendVerificationCode(String toEmail, String code) {
         // 메일 속성 설정
         Properties properties = new Properties();
-        properties.put("mail.smtp.host", "smtp.naver.com");
+        properties.put("mail.smtp.host", "smtp.gmail.com");
         properties.put("mail.smtp.ssl.enable", "true"); // SSL 사용 시
         properties.put("mail.smtp.port", "465"); // 또는 "587"를 사용할 수 있음
         properties.put("mail.smtp.auth", "true");
@@ -86,7 +86,7 @@ public class EmailAuthController implements Initializable {
         Session session = Session.getInstance(properties, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("username", "password"); // <- 이 부분에서 일치하지 않다고 오류가 생김
+                return new PasswordAuthentication("shim010418@gmail.com", "qkwp rabz kivn cerd"); // <- 이 부분에서 일치하지 않다고 오류가 생김
             }
         });
 
@@ -99,8 +99,8 @@ public class EmailAuthController implements Initializable {
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toEmail));
 
             // 이메일 제목과 내용 설정
-            message.setSubject("이메일 인증 코드");
-            message.setText("인증 코드: " + code);
+            message.setSubject("인텔리북스 이메일 인증 코드");
+            message.setText("인증 코드: " + code + "입니다.");
 
             // 메시지 전송
             Transport.send(message);
