@@ -20,6 +20,7 @@ import java.util.Properties;
 import java.util.Random;
 import java.util.ResourceBundle;
 
+
 public class RentEmailAuthController implements Initializable {
 
     //책 데이터 dto 받아오기
@@ -40,6 +41,9 @@ public class RentEmailAuthController implements Initializable {
 
     private String verificationCode;
 
+    public void setBook(Book book) {
+        this.book = book;
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -69,8 +73,6 @@ public class RentEmailAuthController implements Initializable {
         if (codeTF.getText().equals(verificationCode)) {
             // 인증 성공
             showAlert("인증 성공", "이메일 인증이 성공적으로 완료되었습니다!");
-
-            // RentCompletedPage.fxml을 로드하고 해당 페이지로 이동
             loadRentCompletedPage();
         } else {
             // 인증 실패
@@ -84,10 +86,17 @@ public class RentEmailAuthController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/RentCompletedPage.fxml"));
             Parent root = loader.load();
 
+            RentCompletedController controller = loader.getController();
+            controller.setBook(book);
 
-            Stage currentStage = (Stage) codeCheckBtn.getScene().getWindow();
+            Stage newStage = new Stage();
             Scene scene = new Scene(root);
-            currentStage.setScene(scene);
+            newStage.setScene(scene);
+            newStage.show();
+
+//            Stage currentStage = (Stage) codeCheckBtn.getScene().getWindow();
+//            Scene scene = new Scene(root);
+//            currentStage.setScene(scene);
 
         } catch (IOException e) {
             e.printStackTrace();

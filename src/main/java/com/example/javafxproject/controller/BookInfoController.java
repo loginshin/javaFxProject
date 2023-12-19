@@ -176,12 +176,16 @@ public class BookInfoController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/admin/RentEmailAuthPage.fxml"));
             Parent root = loader.load();
 
+            RentEmailAuthController controller = loader.getController();
+            controller.setBook(book);
+
 //            System.out.println("send data => " + bookService);
 
             Stage currentStage = (Stage) rentBtn.getScene().getWindow();
             // 새로운 Scene 생성 후 현재 Stage에 설정
             Scene scene = new Scene(root);
             currentStage.setScene(scene);
+
 
 
 

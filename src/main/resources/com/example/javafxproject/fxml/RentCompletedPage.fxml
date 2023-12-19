@@ -19,6 +19,7 @@
       <ImageView fitHeight="84.0" fitWidth="484.0" layoutX="59.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/Rental Completed !.png" />
-         </image></ImageView>
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

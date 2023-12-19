@@ -3,7 +3,9 @@ package com.example.javafxproject.controller;
 import com.example.javafxproject.dto.Book;
 import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -21,7 +23,8 @@ public class RentCompletedController implements Initializable {
     @FXML
     private Label bookName;
 
-    private Book book;
+    Book book;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -33,10 +36,7 @@ public class RentCompletedController implements Initializable {
         });
         pauseTransition.play();
 
-        // UI 구성 요소에 책 데이터 로드
-        if (book != null) {
-            setBook(book);
-        }
+
     }
 
     public void setBook(Book book) {
