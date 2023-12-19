@@ -24,7 +24,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-import static com.example.javafxproject.config.gptKey;
+import static com.example.javafxproject.Config.configGptKey;
 
 public class BookInfoController implements Initializable {
 
@@ -50,6 +50,7 @@ public class BookInfoController implements Initializable {
 
 
     @FXML private ImageView buyBtn;
+    @FXML private ImageView rentBtn;
 
 
     public void setBook(Book book) {
@@ -160,10 +161,34 @@ public class BookInfoController implements Initializable {
     }
 
 
+    @FXML
+    private void rentBtnClickEvent(){
+        Stage newStage = new Stage();
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/rentPage.fxml"));
+            Parent root = loader.load();
+
+            // 컨트롤러 가져오고 책 설정
+            // RentController controller = loader.getController();
+            //controller.setBook(book);
+
+            Stage currentStage = (Stage) rentBtn.getScene().getWindow();
+
+            Scene scene = new Scene(root);
+            currentStage.setScene(scene);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
  // gpt api사용 메서드
     public static String chatGPT(String prompt) {
         String url = "https://api.openai.com/v1/chat/completions";
-        String apiKey = gptKey; // config파일로 따로 관리 gitegnore에서 필터링
+        String apiKey = configGptKey; // config파일로 따로 관리 gitegnore에서 필터링
         String model = "gpt-3.5-turbo";
 
         try {
