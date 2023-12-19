@@ -25,7 +25,7 @@ GitHub
 ![ex_screenshot](./gitResources/bookImg1.png)
 ![ex_screenshot](./gitResources/bookImg2.jpg)
 ![ex_screenshot](./gitResources/bookImg3.jpg)
-![ex_screenshot](./gitResources/bookImg4.jpg)
+![ex_screenshot](./gitResources/BookImg4.jpg)
 ![ex_screenshot](./gitResources/bookImg5.jpg)
 
 
