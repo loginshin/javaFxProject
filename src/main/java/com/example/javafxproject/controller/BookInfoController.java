@@ -52,7 +52,7 @@ public class BookInfoController implements Initializable {
     @FXML private ImageView buyBtn;
     @FXML private ImageView rentBtn;
 
-    @FXML private ImageView rentBtn;
+
 
 
 
@@ -197,30 +197,6 @@ public class BookInfoController implements Initializable {
     }
 
 
-
-    @FXML
-    private void rentBtnClickEvent(){
-        Stage newStage = new Stage();
-
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/rentPage.fxml"));
-            Parent root = loader.load();
-
-            // 컨트롤러 가져오고 책 설정
-            // RentController controller = loader.getController();
-            //controller.setBook(book);
-
-            Stage currentStage = (Stage) rentBtn.getScene().getWindow();
-
-            Scene scene = new Scene(root);
-            currentStage.setScene(scene);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
-    }
 
  // gpt api사용 메서드
     public static String chatGPT(String prompt) {
