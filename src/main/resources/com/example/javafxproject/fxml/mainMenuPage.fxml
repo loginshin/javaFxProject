@@ -29,7 +29,7 @@
             <Image url="@../img/FeedBackButtonimg.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="btn4" layoutX="245.0" layoutY="169.0" onMouseClicked="#btn3ClickEvent">
+      <ImageView fx:id="btn4" layoutX="245.0" layoutY="169.0" onMouseClicked="#btn4ClickEvent">
          <image>
             <Image url="@../img/ReturnButtonimg.png" />
          </image>

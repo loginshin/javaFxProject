@@ -52,6 +52,9 @@ public class BookInfoController implements Initializable {
     @FXML private ImageView buyBtn;
     @FXML private ImageView rentBtn;
 
+    @FXML private ImageView rentBtn;
+
+
 
     public void setBook(Book book) {
         this.book = book;
@@ -159,6 +162,40 @@ public class BookInfoController implements Initializable {
         }
 
     }
+
+    // btn 4 클릭시
+    @FXML
+    private void rentBtnClickEvent() {
+        System.out.println("rentBtn click event");
+        System.out.println("RentEmailAuthPage로 이동합니다");
+        Stage newStage = new Stage();
+
+
+        try {
+
+            // 새로운 FXML 파일 로드
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/javafxproject/fxml/admin/RentEmailAuthPage.fxml"));
+            Parent root = loader.load();
+
+            RentEmailAuthController controller = loader.getController();
+            controller.setBook(book);
+
+//            System.out.println("send data => " + bookService);
+
+            Stage currentStage = (Stage) rentBtn.getScene().getWindow();
+            // 새로운 Scene 생성 후 현재 Stage에 설정
+            Scene scene = new Scene(root);
+            currentStage.setScene(scene);
+
+
+
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
     @FXML
